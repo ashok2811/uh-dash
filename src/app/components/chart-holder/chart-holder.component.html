@@ -1,0 +1,6 @@
+<!-- dynamic-component.component.html -->
+<div [style.height.px]="height" [style.width]="width + '%'" [style.position]="'absolute'" [style.top.px]="top" [style.left.px]="left" class="dynamic-component">
+    <div class="title">{{ title }}</div>
+    <ng-content></ng-content>
+  </div>
+  

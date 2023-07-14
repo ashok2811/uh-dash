@@ -1,0 +1,44 @@
+/* footer.component.css */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #85d9a125;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .left-section img {
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-links li {
+    margin-right: 10px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
