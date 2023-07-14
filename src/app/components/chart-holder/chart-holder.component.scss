@@ -2,15 +2,21 @@
 .dynamic-component {
     border: 1px solid #0a58074b;
     padding: 0;
-    background-color: #81f2a718;
+    background-color:  rgba(114, 213, 170, 0.127);
     border-radius: 10px;
     height: 100%;
   }
  .title{
     color: rgb(59, 116, 63);
     padding: 5px;
-    background-color: rgba(82, 148, 109, 0.496);
+    background-color: rgba(9, 230, 119, 0.496);
  } 
+
+ .text-chart-value{
+   padding: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 25px;
+ }
 
  .text-chart-top-date{
    padding: 10px;
@@ -26,18 +32,16 @@
  }
 
  .text-chart-change{
-   padding: 2px;
-   margin: 2px;
+   padding: 2px 10px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   background-color: rgb(31, 167, 108);
+   background-color: rgb(3, 210, 120);
    border-radius: 15px;
    font-size: 15px;
  }
  .text-chart-change-negative{
-   padding: 2px;
-   margin: 2px;
+   padding: 2px 10px ;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   background-color: rgb(249, 76, 1);
+   background-color: rgba(249, 1, 18, 0.627);
    border-radius: 15px;
    font-size: 15px;
  }
