@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from "./components/footer/footer.module";
 import { ChartHolderModule } from "./components/chart-holder/chart-holder.module";
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
     declarations: [
         AppComponent
+        
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -16,7 +18,8 @@ import { ChartHolderModule } from "./components/chart-holder/chart-holder.module
         BrowserModule,
         HeaderModule,
         FooterModule,
-        ChartHolderModule
+        ChartHolderModule,
+        HighchartsChartModule
     ]
 })
 export class AppModule { }

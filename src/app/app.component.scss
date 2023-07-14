@@ -1,15 +1,45 @@
-.app-container {
+  .app-container-pie {
     background-color: #ffffff;
-    min-height: calc(100vh - 60px); /* Subtract the footer height from the viewport height */
     display: grid;
-    grid-template-columns: auto auto auto auto auto ;
+    grid-template-columns: 50% 50%;
     padding: 10px;
   }
 
-  .app-item {
+  .app-container-text{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 10px;
+  }
+  .app-item-pie{
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.201);
     padding: 10px;
     font-size: 20px;
     text-align: center;
   }
+
+  .app-item-text{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.201);
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .app-container-line{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 10px;
+  }
+
+  .app-item-line{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.201);
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+

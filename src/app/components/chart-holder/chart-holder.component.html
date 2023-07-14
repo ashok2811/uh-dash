@@ -1,6 +1,16 @@
 <!-- dynamic-component.component.html -->
 <div [style.height.px]="height" [style.top.px]="top" [style.left.px]="left" class="dynamic-component">
     <div class="title">{{ title }}</div>
-    <ng-content></ng-content>
+
+    <span class ="text-chart" *ngIf="isText">
+        <div class="text-chart-top-date">{{data?.topDate}}</div>
+        <span class ="text-chart-value">{{data?.value}}</span>
+        <span class ="text-chart-change" *ngIf="data.isPositive">{{data?.change}}</span>
+        <span class ="text-chart-change-negative" *ngIf="!data.isPositive">{{data?.change}}</span>
+        <div class ="text-chart-bottom-date">{{data?.bottomDate}}</div>
+    </span>
+
+    <ng-content>
+    </ng-content>
   </div>
   

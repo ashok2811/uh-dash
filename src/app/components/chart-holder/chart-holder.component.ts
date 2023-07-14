@@ -1,15 +1,24 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chart-holder',
   templateUrl: './chart-holder.component.html',
   styleUrls: ['./chart-holder.component.scss']
 })
-export class ChartHolderComponent {
-  @Input() title: string ='';
+export class ChartHolderComponent  implements OnInit{
+  constructor() { }
+  @Input() title: any ='';
   @Input() height: string ='';
   @Input() width: string ='';
   @Input() top: string ='';
   @Input() left: string ='';
+  @Input() isText: boolean = false;
+  @Input() isPie: boolean = false;
+  @Input() isLine: boolean = false;
+  @Input() data: any;
+  ngOnInit() {
+
+  }
+
 }
 

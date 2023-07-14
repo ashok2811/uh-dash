@@ -1,10 +1,32 @@
 <!-- app.component.html -->
 <app-header></app-header>
-<div class="app-container">
-    <app-chart-holder class="app-item" title="Dynamic Component" height="200"  top="100" left="0" ></app-chart-holder>
-    <app-chart-holder class="app-item" title="Dynamic Component" height="200"  top="100" left="0" ></app-chart-holder>
-    <app-chart-holder class="app-item" title="Dynamic Component" height="200"  top="100" left="0" ></app-chart-holder>
-    <app-chart-holder class="app-item" title="Dynamic Component" height="200"  top="100" left="0" ></app-chart-holder>
-    <app-chart-holder class="app-item" title="Dynamic Component" height="200"  top="100" left="0" ></app-chart-holder>
+<div class="app-container-text">
+    <span  class="app-item-text" *ngFor='let item of textChart; let i = index'>
+        <app-chart-holder [isText]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+        </app-chart-holder>
+    </span> 
+   
 </div>
+
+<div class="app-container-pie">
+    <span  class="app-item-pie" *ngFor='let item of pieChart; let i = index'>
+        <app-chart-holder [isPie]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+            <highcharts-chart
+       [Highcharts] = "highcharts" 
+       [options] = "item.data" 
+       style = "width: 100%; border-radius: 10px; display: flex; ">
+    </highcharts-chart>
+        </app-chart-holder>
+    </span> 
+</div>
+<div class="app-container-line">
+    <app-chart-holder class="app-item-line" title="Dynamic Component" top="100" left="0" >
+        <highcharts-chart
+   [Highcharts] = "highcharts" 
+   [options] = "chartOptionsLine" 
+   style = "width: 100%; border-radius: 10px; display: flex; ">
+</highcharts-chart>
+    </app-chart-holder>
+</div>
+
 <app-footer></app-footer>
