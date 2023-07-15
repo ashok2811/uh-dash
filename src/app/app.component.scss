@@ -1,20 +1,21 @@
   .app-container-pie {
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     padding: 10px;
   }
 
   .app-container-text{
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
     padding: 10px;
   }
   .app-item-pie{
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.201);
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
     text-align: center;
   }
@@ -30,7 +31,7 @@
   .app-container-line{
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
     padding: 10px;
   }
 
@@ -40,6 +41,18 @@
     padding: 10px;
     font-size: 20px;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .app-container-text{
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .app-container-pie{
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .app-container-line{
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
   }
 
 

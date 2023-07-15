@@ -1,60 +1,75 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import { Store } from '@ngrx/store';
+import { selectItems, selectLoading, selectError, loadItems } from './app.module';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+   items: any;
+   error: any;
+   loading: boolean = true;
+   data: any;
+   constructor(private store: Store) {
+      this.store.dispatch(loadItems());
+   }
+
+items$ = this.store.select(selectItems);
+loading$ = this.store.select(selectLoading);
+error$ = this.store.select(selectError);
+
   title = 'uh-dash';
   highcharts = Highcharts;
-
-  textChart =[{
-    title : "Cohert Population",
-    data : {
-      value : "2500",
-      topDate : "",
-      change : "",
-      bottomDate: "Total: 2500",
-      isPositive : false
-    }
-  }, {
-    title : "Total ER",
-    data : {
-      value : "3969",
-      topDate : "April-2023 (Till Today)",
-      change : "11%",
-      bottomDate: "March-2023: 4459",
-      isPositive : true
-    }
-  }, {
-    title : "Total Admissions",
-    data : {
-      value : "4179",
-      topDate : "April-2023 (Till Today)",
-      change : "-7.4%",
-      bottomDate: "March-2023: 4459",
-      isPositive : false
-    }
-  },{
-    title : "Avg Cost",
-    data : {
-      value : "$11.31",
-      topDate : "April-2023 (Till Today)",
-      change : "-1.7%",
-      bottomDate: "March-2023: $12",
-      isPositive : false
-    }
-  },{
-    title : "Total Specialist Visit",
-    data : {
-      value : "5244",
-      topDate : "April-2023 (Till Today)",
-      change : "-9.3%",
-      bottomDate: "March-2023: 4459",
-      isPositive : false
-    }
-  }]
+   textChart :any;
+//   textChart =[{
+//     title : "Cohert Population",
+//     data : {
+//       value : "2500",
+//       topDate : "",
+//       change : "",
+//       bottomDate: "Total: 2500",
+//       isPositive : false
+//     }
+//   }, {
+//     title : "Total ER",
+//     data : {
+//       value : "3969",
+//       topDate : "April-2023 (Till Today)",
+//       change : "11%",
+//       bottomDate: "March-2023: 4459",
+//       isPositive : true
+//     }
+//   }, {
+//     title : "Total Admissions",
+//     data : {
+//       value : "4179",
+//       topDate : "April-2023 (Till Today)",
+//       change : "-7.4%",
+//       bottomDate: "March-2023: 4459",
+//       isPositive : false
+//     }
+//   },{
+//     title : "Avg Cost",
+//     data : {
+//       value : "$11.31",
+//       topDate : "April-2023 (Till Today)",
+//       change : "-1.7%",
+//       bottomDate: "March-2023: $12",
+//       isPositive : false
+//     }
+//   },{
+//     title : "Total Specialist Visit",
+//     data : {
+//       value : "5244",
+//       topDate : "April-2023 (Till Today)",
+//       change : "-9.3%",
+//       bottomDate: "March-2023: 4459",
+//       isPositive : false
+//     }
+//   }]
    chartOptionsLine = {   
       chart: {
          type: "spline"
@@ -178,7 +193,16 @@ export class AppComponent {
       } 
    }
 ]
-   
+ 
+   ngOnInit() {
+      this.items$.subscribe(event => {this.textChart = event;
+         // this.data = JSON.stringify(this.textChart);
+      });
+    
 
+      this.loading$.subscribe(event => this.loading = event);
+      this.error$.subscribe(event => this.error = event);
+      console.log(this.items)
+   }
 
 }

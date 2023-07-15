@@ -1,5 +1,10 @@
 <!-- app.component.html -->
 <app-header></app-header>
+
+<div *ngIf="loading">Loading...</div>
+    <div *ngIf="error">{{ error }}</div>
+    <p> {{data}}</p>
+    
 <div class="app-container-text">
     <span  class="app-item-text" *ngFor='let item of textChart; let i = index'>
         <app-chart-holder [isText]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
