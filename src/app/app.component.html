@@ -5,33 +5,26 @@
     <div *ngIf="error">{{ error }}</div>
     <p> {{data}}</p>
     
-<div class="app-container-text">
-    <span  class="app-item-text" *ngFor='let item of textChart; let i = index'>
+<div *ngIf="!loading" class="app-container-text">
+    <span  class="app-item-text" *ngFor='let item of data[1].text; let i = index'>
         <app-chart-holder [isText]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
         </app-chart-holder>
     </span> 
    
 </div>
 
-<div class="app-container-pie">
-    <span  class="app-item-pie" *ngFor='let item of pieChart; let i = index'>
+<div *ngIf="!loading" class="app-container-pie">
+    <span  class="app-item-pie" *ngFor='let item of data[2].pie; let i = index'>
         <app-chart-holder [isPie]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
-            <highcharts-chart
-       [Highcharts] = "highcharts" 
-       [options] = "item.data" 
-       style = "width: 100%; border-radius: 10px; display: flex; ">
-    </highcharts-chart>
         </app-chart-holder>
     </span> 
 </div>
-<div class="app-container-line">
-    <app-chart-holder class="app-item-line" title="Dynamic Component" top="100" left="0" >
-        <highcharts-chart
-   [Highcharts] = "highcharts" 
-   [options] = "chartOptionsLine" 
-   style = "width: 100%; border-radius: 10px; display: flex; ">
-</highcharts-chart>
-    </app-chart-holder>
+<div *ngIf="!loading" class="app-container-line">
+    <span class="app-item-line" *ngFor='let item of data[0].line; let i = index'>
+        <app-chart-holder [isLine]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+        </app-chart-holder>
+    </span>
+    
 </div>
 
 <app-footer></app-footer>

@@ -1,5 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
-
+import * as Highcharts from 'highcharts';
 @Component({
   selector: 'app-chart-holder',
   templateUrl: './chart-holder.component.html',
@@ -16,6 +16,7 @@ export class ChartHolderComponent  implements OnInit{
   @Input() isPie: boolean = false;
   @Input() isLine: boolean = false;
   @Input() data: any;
+  highcharts = Highcharts;
   ngOnInit() {
 
   }

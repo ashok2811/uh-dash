@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from "./components/footer/footer.module";
 import { ChartHolderModule } from "./components/chart-holder/chart-holder.module";
-import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 import { itemsReducer } from './store/reducers';
 import { ItemsEffects } from './store/effects';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,7 +33,6 @@ import { EffectsModule } from '@ngrx/effects';
         EffectsModule.forRoot([]),
         StoreModule.forFeature('items', itemsReducer),
         EffectsModule.forFeature([ItemsEffects]),
-        HighchartsChartModule
     ]
 })
 export class AppModule { }

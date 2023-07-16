@@ -10,6 +10,22 @@
         <div class ="text-chart-bottom-date">{{data?.bottomDate}}</div>
     </span>
 
+    <span  *ngIf="isPie">
+        <highcharts-chart
+        [Highcharts] = "highcharts" 
+        [options]="data"
+        style = "width: 100%; border-radius: 10px; display: flex; ">
+     </highcharts-chart>
+    </span>
+
+    <span *ngIf="isLine">
+        <highcharts-chart
+        [Highcharts] = "highcharts" 
+        [options]="data"
+        style = "width: 100%; border-radius: 10px; display: flex; ">
+     </highcharts-chart>
+    </span>
+
     <ng-content>
     </ng-content>
   </div>
