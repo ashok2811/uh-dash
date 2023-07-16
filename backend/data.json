@@ -1,0 +1,52 @@
+[
+    {
+      "title": "Cohert Population",
+      "data": {
+        "value": "2500",
+        "topDate": "",
+        "change": "",
+        "bottomDate": "Total: 2500",
+        "isPositive": false
+      }
+    },
+    {
+      "title": "Total ER",
+      "data": {
+        "value": "3969",
+        "topDate": "April-2023 (Till Today)",
+        "change": "11%",
+        "bottomDate": "March-2023: 4459",
+        "isPositive": true
+      }
+    },
+    {
+      "title": "Total Admissions",
+      "data": {
+        "value": "4179",
+        "topDate": "April-2023 (Till Today)",
+        "change": "-7.4%",
+        "bottomDate": "March-2023: 4459",
+        "isPositive": false
+      }
+    },
+    {
+      "title": "Avg Cost",
+      "data": {
+        "value": "$11.31",
+        "topDate": "April-2023 (Till Today)",
+        "change": "-1.7%",
+        "bottomDate": "March-2023: $12",
+        "isPositive": false
+      }
+    },
+    {
+      "title": "Total Specialist Visit",
+      "data": {
+        "value": "5244",
+        "topDate": "April-2023 (Till Today)",
+        "change": "-9.3%",
+        "bottomDate": "March-2023: 4459",
+        "isPositive": false
+      }
+    }
+  ]
