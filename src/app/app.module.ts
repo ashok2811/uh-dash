@@ -15,6 +15,7 @@ import {
 import { loadItems } from './store/actions';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { SearchModule } from './components/search/search.module';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { EffectsModule } from '@ngrx/effects';
         BrowserModule,
         HeaderModule,
         FooterModule,
+        SearchModule,
         ChartHolderModule,
         HttpClientModule, 
         StoreModule.forRoot({}), 

@@ -1,9 +1,7 @@
 <!-- app.component.html -->
 <app-header></app-header>
+<app-search></app-search>
 
-<div *ngIf="loading">Loading...</div>
-    <div *ngIf="error">{{ error }}</div>
-    <p> {{data}}</p>
     
 <div *ngIf="!loading" class="app-container-text">
     <span  class="app-item-text" *ngFor='let item of data[1].text; let i = index'>
