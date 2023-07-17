@@ -30,7 +30,7 @@ This is a single-page analytics application built with Angular that allows users
 
 or
 
-1. Start the backend server:
+1. Start the backend server in /backend folder:
 
    ```shell
    node server.js
@@ -38,13 +38,13 @@ or
 
    The JSON data will be served at `localhost:3000/data`.
 
-1. Start the Angular development server:
+1. Open another terminal and start the Angular development server:
 
    ```shell
    ng serve
    ```
 
-   The application will be accessible at `localhost:4200`.
+   The application will be accessible at `localhost:4200`. (if not then look in the terminal for port number)
 
 ## Configuration
 
