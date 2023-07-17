@@ -31,6 +31,25 @@ ngOnInit() {
      this.error = event;
    });
  }
+
+ activeButton = 'content1';
+
+ toggleContent(contentId: string) {
+   const contentSections = document.getElementsByClassName('dropdown-content');
+   for (let i = 0; i < contentSections.length; i++) {
+     contentSections[i].setAttribute('style', 'display: none');
+   }
+   const buttons = document.getElementsByTagName('button');
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].classList.remove('active');
+   }
+   const content = document.getElementById(contentId);
+   content?.setAttribute('style', 'display: block');
+
+   const button = document.getElementById('btn' + contentId.slice(-1));
+   button?.classList.add('active');
+   this.activeButton = contentId;
+ }
  
 
 }

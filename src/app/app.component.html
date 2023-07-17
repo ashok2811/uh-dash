@@ -1,9 +1,7 @@
-<!-- app.component.html -->
 <app-header></app-header>
 <app-search></app-search>
 
 <span *ngIf="loading" class="loading-container">
-    <!-- Show loading state -->
     <div class="loader"></div>
     <p>Loading...</p>
   </span>
@@ -23,10 +21,27 @@
         </span> 
     </div>
     <div class="app-container-line">
-        <span class="app-item-line" *ngFor='let item of data[0].line; let i = index'>
-            <app-chart-holder [isLine]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
-            </app-chart-holder>
-        </span>
+        <div class="dropdown">
+            <span id="btn1" [class.active]="activeButton === 'content1'" (click)="toggleContent('content1')">Avg Admissions</span>
+            <span id="btn2" [class.active]="activeButton === 'content2'" (click)="toggleContent('content2')">Avg ER</span>
+            <span id="btn3" [class.active]="activeButton === 'content3'" (click)="toggleContent('content3')">Avg Speialist</span>
+            <span id="btn4" [class.active]="activeButton === 'content4'" (click)="toggleContent('content4')">Avg Cost</span>
+
+            <span id="content1" class="dropdown-content" [style.display]="activeButton === 'content1' ? 'block' : 'none'">
+                <span class="app-item-line" *ngFor='let item of data[0].line; let i = index'>
+                    <app-chart-holder [isLine]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+                    </app-chart-holder>
+                </span>
+            </span>
+            <span id="content2" class="dropdown-content" [style.display]="activeButton === 'content2' ? 'block' : 'none'">
+            </span>
+            <span id="content3" class="dropdown-content" [style.display]="activeButton === 'content3' ? 'block' : 'none'">
+            </span>
+            <span id="content4" class="dropdown-content" [style.display]="activeButton === 'content4' ? 'block' : 'none'">  
+            </span>
+          </div>
+          
+        
     </div>
   </div>
 
