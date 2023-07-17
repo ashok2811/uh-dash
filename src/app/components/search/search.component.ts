@@ -17,8 +17,7 @@ export class SearchComponent {
 
   @HostListener('window:keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Backspace') {
-      this.searchTerm = '';
+    if (this.searchTerm?.length<2) {
       this.resetChartHolders();
     }
   }
@@ -45,18 +44,12 @@ export class SearchComponent {
       if (!chartHolderText.includes(searchTermLowerCase)) {
         chartHolder.style.display = 'none';
         chartHolder.style.boxShadow = 'none';
-      } else {
-        chartHolder.style.border = '2px solid green';
-        chartHolder.style.boxShadow = '0 0 10px rgba(0, 255, 0, 0.5)';
-      }
+      } 
     }
   }
 
   toggleSearchBox(): void {
     this.isSearchBoxActive = !this.isSearchBoxActive;
-  }
-  closeSearchBox(){
-    this.isSearchBoxActive = !this.isSearchBoxActive;;
   }
   
 }
