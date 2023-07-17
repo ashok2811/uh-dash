@@ -1,7 +1,8 @@
 # Angular SPA Application : Dashboard
+![Screenshot from 2023-07-17 11-02-15](https://github.com/ashok2811/uh-dash/assets/29013031/e6c4e54f-95eb-43db-b989-1eefc40cd79f)
 
-Author: Ashok Kumar Chaudhary
-
+### Video
+[![](https://markdown-videos.vercel.app/youtube/P5kbtp1j9yA)](https://youtu.be/P5kbtp1j9yA)
 ## Description
 
 This is a single-page analytics application built with Angular that allows users to view and configure various metrics through Key Performance Indicators (KPIs) and charts. The application provides features such as customizing metric properties, searching for specific metrics/values, and includes state management using NgRx. It also includes test cases to ensure correct functionality.
