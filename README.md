@@ -1,27 +1,73 @@
-# UhDash
+# Angular SPA Application : Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+Author: Ashok Kumar Chaudhary
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is a single-page analytics application built with Angular that allows users to view and configure various metrics through Key Performance Indicators (KPIs) and charts. The application provides features such as customizing metric properties, searching for specific metrics/values, and includes state management using NgRx. It also includes test cases to ensure correct functionality.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+   ```shell
+   git clone https://github.com/ashok2811/uh-dash.git
+   cd uh-dash
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Install the dependencies:
 
-## Running unit tests
+   ```shell
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+1. Run the automation script
+   ```shell
+   bash run.sh
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+or
 
-## Further help
+1. Start the backend server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```shell
+   node server.js
+   ```
+
+   The JSON data will be served at `localhost:3000/data`.
+
+1. Start the Angular development server:
+
+   ```shell
+   ng serve
+   ```
+
+   The application will be accessible at `localhost:4200`.
+
+## Configuration
+
+To configure the metrics' properties, follow these steps:
+
+1. Open the application in your browser at `localhost:4200`.
+
+2. Use the provided `data.json` to customize the metrics' properties, such as position, chart type, height, and width.
+
+3. Use the search functionality to find specific metrics/values on the page.
+
+## Testing
+
+To run the test cases for the application, use the following command:
+
+```shell
+ng test
+```
+
+The tests will be executed, and the results will be displayed in the console.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
