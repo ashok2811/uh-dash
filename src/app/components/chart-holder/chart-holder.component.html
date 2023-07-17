@@ -5,8 +5,11 @@
     <span class ="text-chart" *ngIf="isText">
         <div class="text-chart-top-date">{{data?.topDate}}</div>
         <span class ="text-chart-value">{{data?.value}}</span>
-        <span class ="text-chart-change" *ngIf="data.isPositive">{{data?.change}}</span>
-        <span class ="text-chart-change-negative" *ngIf="!data.isPositive">{{data?.change}}</span>
+        <span *ngIf="data?.change">
+            <span class ="text-chart-change" *ngIf="data.isPositive">{{data?.change}}</span>
+            <span class ="text-chart-change-negative" *ngIf="!data.isPositive">{{data?.change}}</span>
+        </span>
+ 
         <div class ="text-chart-bottom-date">{{data?.bottomDate}}</div>
     </span>
 

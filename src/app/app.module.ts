@@ -19,8 +19,7 @@ import { SearchModule } from './components/search/search.module';
 
 @NgModule({
     declarations: [
-        AppComponent
-        
+        AppComponent    
     ],
     providers: [],
     bootstrap: [AppComponent],

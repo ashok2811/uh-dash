@@ -2,27 +2,33 @@
 <app-header></app-header>
 <app-search></app-search>
 
-    
-<div *ngIf="!loading" class="app-container-text">
-    <span  class="app-item-text" *ngFor='let item of data[1].text; let i = index'>
-        <app-chart-holder [isText]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
-        </app-chart-holder>
-    </span> 
-   
-</div>
+<span *ngIf="loading" class="loading-container">
+    <!-- Show loading state -->
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </span>
 
-<div *ngIf="!loading" class="app-container-pie">
-    <span  class="app-item-pie" *ngFor='let item of data[2].pie; let i = index'>
-        <app-chart-holder [isPie]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
-        </app-chart-holder>
-    </span> 
-</div>
-<div *ngIf="!loading" class="app-container-line">
-    <span class="app-item-line" *ngFor='let item of data[0].line; let i = index'>
-        <app-chart-holder [isLine]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
-        </app-chart-holder>
-    </span>
+  <div *ngIf="!loading">
+    <div class="app-container-text">
+        <span  class="app-item-text" *ngFor='let item of data[1].text; let i = index'>
+            <app-chart-holder [isText]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+            </app-chart-holder>
+        </span> 
+    </div>
     
-</div>
+    <div class="app-container-pie">
+        <span  class="app-item-pie" *ngFor='let item of data[2].pie; let i = index'>
+            <app-chart-holder [isPie]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+            </app-chart-holder>
+        </span> 
+    </div>
+    <div class="app-container-line">
+        <span class="app-item-line" *ngFor='let item of data[0].line; let i = index'>
+            <app-chart-holder [isLine]=true [title]="item.title" [data]= "item.data" top="100" left="0" >
+            </app-chart-holder>
+        </span>
+    </div>
+  </div>
+
 
 <app-footer></app-footer>

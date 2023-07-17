@@ -179,17 +179,18 @@
     "text": [
       {
         "title": "Cohert Population",
-        "order": 0,
+        "order": 4,
         "data": {
-          "value": "2500",
+          "value": "2600",
           "topDate": "",
           "change": "",
-          "bottomDate": "Total: 2500",
+          "bottomDate": "Total: 2600",
           "isPositive": false
         }
       },
       {
         "title": "Total ER",
+        "order": 1,
         "data": {
           "value": "3969",
           "topDate": "April-2023 (Till Today)",
@@ -200,6 +201,7 @@
       },
       {
         "title": "Total Admissions",
+        "order": 3,
         "data": {
           "value": "4179",
           "topDate": "April-2023 (Till Today)",
@@ -210,6 +212,7 @@
       },
       {
         "title": "Avg Cost",
+        "order": 2,
         "data": {
           "value": "$11.31",
           "topDate": "April-2023 (Till Today)",
@@ -220,6 +223,7 @@
       },
       {
         "title": "Total Specialist Visit",
+        "order": 0,
         "data": {
           "value": "5244",
           "topDate": "April-2023 (Till Today)",
