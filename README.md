@@ -37,7 +37,7 @@ or
    node server.js
    ```
 
-   The JSON data will be served at `localhost:3000/data`.
+   The JSON data will be served at `localhost:3000/data` from a Node-Express Server. It can be used to Re-configure or Update, or fetch the dat a from some third part API or Storage and serve to our frontend;
 
 1. Open another terminal and start the Angular development server:
 
